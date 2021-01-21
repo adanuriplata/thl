@@ -1,10 +1,14 @@
 // Font Face
-// @include font-face('family', 'filename', 500, 'normal');
+ @include font-face('gothambold', 'gothambold-webfont', 600, 'bold');
+ @include font-face('gothamlight', 'gothamlight-webfont', 300, 'light');
+ @include font-face('gothammedium', 'gothammedium-webfont', 400, 'normal');
+ @include font-face('gothamthin', 'gotham-thin-webfont', 200, 'thin');
 
 // Body
 
 html {
    @apply text-base;
+   overflow-x: hidden; overflow-y: auto;
 }
 
 body {
@@ -48,3 +52,55 @@ p {
 .wf-inactive {
    @apply visible;
 }
+
+.mkp-button-form {
+   background: #DE806E;
+   border-color: #DE806E;
+}
+
+.mkp-button-form:hover {
+   opacity: .8;
+}
+
+.mkp-border {
+   width: 100%;
+}
+
+.mkp-shadow {
+   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+ }
+
+ .mkp-letter-spacing {
+   letter-spacing: .1em;
+ }
+
+@media (min-width: 768px) {
+   .mkp-letter-spacing {
+      letter-spacing: 15px;
+   }
+   .mkp-border {
+      width: 75%;
+   }
+
+   .mkp-pescadito {
+      width: 400px;
+    top: -50px;
+    left: -10px;
+   }
+  }
+
+  @media (min-width: 1024px) {
+   .mkp-pescadito {
+      width: 600px;
+    top: -120px;
+    left: -110px;
+   }
+  }
+
+  @media (min-width: 1500px) {
+   .mkp-pescadito {
+      width: 850px;
+      top: -220px;
+      left: -210px;
+   }
+  }

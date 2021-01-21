@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "name": "Tailwind",
+  "description": "",
+  "icons": {
+    "60": "/dist/images/favicon/firefox_app_60x60.png",
+    "128": "/dist/images/favicon/firefox_app_128x128.png",
+    "512": "/dist/images/favicon/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": "Jason Mayo (@bymayo)",
+    "url": "https://madebyshape.co.uk"
+  }
+}

@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="es">
 
 <head>
 
@@ -7,19 +7,366 @@
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-   <title>Tailwind CSS</title>
+   <title>Shark Tower | Trust Homes</title>
 
+   <link href="dist/css/slider.css" rel="stylesheet" type="text/css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
    <link rel="stylesheet" href="dist/css/app.css" as="style" onload="this.rel='stylesheet'">
    <link rel="preload" href="dist/css/app.css" as="style" onload="this.rel='stylesheet'">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<!-- <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"> -->
+<link rel="icon" href="https://trusthomes.mx/wp-content/uploads/2020/11/favico-100x100.png" sizes="32x32" />
+<link rel="icon" href="https://trusthomes.mx/wp-content/uploads/2020/11/favico-100x100.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://trusthomes.mx/wp-content/uploads/2020/11/favico-100x100.png" />
+<meta name="msapplication-TileImage" content="https://trusthomes.mx/wp-content/uploads/2020/11/favico-100x100.png" />
    <noscript>
       <link rel="stylesheet" href="dist/css/app.css">
    </noscript>
+<style>
+.layer {
+
+background-position: center bottom;
+
+background-repeat: no-repeat;
+
+background-size: 100% 700px;
+
+width: 100%;
+
+min-height: 700px;
+
+height: auto;
+
+position: fixed;
+
+}
+
+.layer-bg {
+
+background-color: #8FD1F3;
+z-index: -1;
+}
+
+.layer-1 {
+   background-image: url("dist/images/layer-tl.png");
+}
+
+.layer-2 {
+   background-image: url("dist/images/layer-r.png");
+}
+
+.layer-3 {
+   background-image: url("dist/images/layer-r2.png");
+}
+
+.layer-4 {
+   background-image: url("dist/images/layer-bl-2.png");
+}
+
+
+
+/*start header sticky style*/
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  z-index: 998;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+/*end header sticky style*/
+
+</style>
+
 
 </head>
 
 <body 
    x-data="app()"
-   x-init="viewportHeight()">
+   x-init="viewportHeight()" style="font-family: 'gothammedium', sans-serif;">
+
+
+<div class="parallax hidden md:block" id="home"></div>
+
+<div class="layer layer-bg hidden md:block" data-parallax-speed="1"></div>
+
+<div class="layer layer-1 hidden md:block" data-parallax-speed="0.5"></div>
+
+<div class="layer layer-2  md:block" data-parallax-speed="0.5"></div>
+
+<div class="layer layer-3 hidden md:block" data-parallax-speed="0.4"></div>
+
+<div class="layer layer-4  md:block" data-parallax-speed="0.5"></div>
+
+   <section class="section">
+      <div class="h-screen bg-left-bottom flex items-center" style="background-color: #8FD1F3;">
+         <div class="container" style="margin: 0 auto;">
+            <h1 class="text-center md:text-4xl  text-3xl font-thin p-5 mkp-letter-spacing" style=" color: #383838; font-family: 'gothamlight', sans-serif">Delivered Architecture <br>
+               Inspired by Nature
+            </h1>
+         </div>
+         
+      </div>
+   </section>
+
+   <!-- <section class="section">
+      <div class="h-screen  bg-center" style="background-color: #8FD1F3;">
+      <div class="h-screen bg-center flex items-center justify-items-center" style="background-image: url('dist/images/nubes.png')">
+
+         <div class="bg-fixed" style="margin: 0 auto;">
+            <h1 class="text-center text-4xl font-thin" style="letter-spacing: 15px; color: #383838; font-family: 'gothamthin', sans-serif">Delivered Architecture <br>
+               Inspired by Nature
+            </h1>
+         </div>
+         
+      </div>
+      </div>
+   </section> -->
+
+   <section class="shadow-2xl">
+      <div class="h-screen bg-center bg-cover" style="background-image: url('dist/images/bg-2.jpg')"">
+         <div class="header text-center" style="background-color: #637987;" id="myHeader">
+            <div class="logo-header p-3" style="max-width: 350px; margin: 0 auto;"><img src="dist/images/logo-shark-header-croped.png" alt=""></div>
+         </div>
+      </div>
+   </section>
+
+
+   
+   <section class="py-24" style="background-color: #202020;">
+      <div class="md:flex wrap md:justify-around md:container md:items-center">
+
+         <div class="mkp-slider md:w-5/12 mkp-shadow md:m-0 md:p-10">
+            <div class="slider-container">
+               <div class="slider-carousel">
+                 <div class="slider">
+                   <div class="slide-panel">
+                     <img class="slide-img" src="dist/images/slider-6.jpg" alt="">
+                     <!-- <div class="slide-box">
+                       <h2 class="slide-text"></h2>
+                     </div> -->
+                     <div class="slide-overlay"></div>
+                   </div>
+                   <div class="slide-panel">
+                     <img class="slide-img" src="dist/images/slider-7.jpg" alt="">
+                     <!-- <div class="slide-box">
+                       <h2 class="slide-text"></h2>
+                     </div> -->
+                   </div>
+                   <div class="slide-panel">
+                     <img class="slide-img" src="dist/images/slider-8.jpg" alt="">
+                     <!-- <div class="slide-box">
+                       <h2 class="slide-text"></h2>
+                     </div> -->
+                   </div>
+                   <div class="slide-panel">
+                     <img class="slide-img" src="dist/images/slider-9.jpg" alt="">
+                     <!-- <div class="slide-box">
+                       <h2 class="slide-text"></h2>
+                     </div> -->
+                   </div>
+                   <div class="slide-panel">
+                     <img class="slide-img" src="dist/images/slider-10.jpg" alt="">
+                     <!-- <div class="slide-box">
+                       <h2 class="slide-text"></h2>
+                     </div> -->
+                   </div>
+                 </div>
+             
+                 <div class="slider-controls">
+                   <span class="slider-arrow prev-slide">
+                     <i class="material-icons">
+                       keyboard_arrow_left
+                     </i>
+                   </span>
+                   <span class="slider-arrow next-slide">
+                     <i class="material-icons">
+                       keyboard_arrow_right
+                     </i>
+                   </span>
+                   <div class="slideshow-toggle">
+                     <i class="material-icons play-slideshow">
+                       play_arrow
+                     </i>
+                     <i class="material-icons pause-slideshow">
+                       pause
+                     </i>
+                   </div>
+                   <ul class="slide-selector">
+                     <li class="slide-selected"></li>
+                     <li></li>
+                     <li></li>
+                     <li></li>
+                     <li></li>
+                   </ul>
+                 </div>
+               </div>
+             </div>
+             
+             <div class="slider-modal">
+               <span class="slider-close">&times;</span>
+               <div class="modal-slide"></div>
+             </div>
+         </div>
+
+         <div class="mkp-data md:w-5/12  m-12  md:m-0 md:p-10">
+            <div class="mkpicono py-12 md:w-48 md:mx-auto"><img src="dist/images/logo-shark-croped.png" alt=""></div>
+            <div class="mkp__data__titulo md:text-left text-center">
+               <h2 class="text-2xl text-white font-bold tracking-widest">LUX  TWO  BEDROOM  APARTAMENT</h2>
+               <h3 class="font-bold  text-base tracking-widest md:pt-1 pt-5" style="color: #DE806E;">LUJOSO DEPARTAMENTO EN RESIDENCIAL DE CLASE MUNDIAL</h3>
+            </div>
+            <div class="mkp__data_caracteristicas md:text-left text-center text-white mt-16 md:text-2xl text-1xl font-light tracking-widest" style="font-family: 'gothamlight', sans-serif;">
+               <p>Puerto Cancún <br>
+               USD$750,000 <br>
+               188.23m2</p>
+            </div>
+            <div class="mkp__data_caracteristicas-2 md:text-left text-center text-white mt-10 md:text-2xl text-1xl font-light tracking-widest" style="font-family: 'gothamlight', sans-serif;">
+               <p>Comunidad Residencial y Marina <br>
+               250m de Playa Privada <br>
+               Pool Lounge <br>
+               Gimnasio Ultra Moderno <br>
+               Infinity Hot Tubs <br>
+               Spa de Clase Mundial <br>
+               Cine
+               </p>
+            </div>
+            <div class="mkp-border my-10" style="border-bottom: 3px  solid #DE806E;"></div>
+         </div>
+
+      </div>
+   </section>
+
+
+
+
+
+   <section class="md:py-24 py:18" style="background-color: #202020;">
+      <div class="mkp-container container mx-auto mkp-shadow md:pb-10">
+         <div class="container__mkp-form mx-auto md:flex md:justify-between md:items-center">
+            <div class="mkp-form md:w-1/2" >
+               <h3 class="text-3xl font-light text-white mkp-letter-spacing" style="font-family: 'gothamlight', sans-serif;">Contact Us</h3>
+               <form class="w-full max-w-sm mt-10" method="post" action="https://www.flexyform.com/f/6689e797138285ad949ee93596c0da34fb83b520">
+                  <div class="flex mt-12 items-center border-b-2 border-red-700 py-2" style="border-color: #DE806E;">
+                    <input class="appearance-none bg-transparent border-none w-full text-white font-light tracking-widest mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Your name" aria-label="Your Name" name="nombre" style="font-family: 'gothamlight', sans-serif;">
+                  </div>
+                  <div class="flex mt-12 items-center border-b-2 border-red-700 py-2" style="border-color: #DE806E;">
+                    <input class="appearance-none bg-transparent border-none w-full text-white font-light tracking-widest mr-3 py-1 px-2 leading-tight focus:outline-none" type="phone" placeholder="Your number" aria-label="Your Nunmber" name="telefono" style="font-family: 'gothamlight', sans-serif;">
+                  </div>
+                  <div class="flex mt-12 items-center border-b-2 border-red-700 py-2" style="border-color: #DE806E;">
+                    <input class="appearance-none bg-transparent border-none w-full text-white font-light tracking-widest mr-3 py-1 px-2 leading-tight focus:outline-none" type="email" placeholder="Your email" aria-label="Your email" name="correo" style="font-family: 'gothamlight', sans-serif;">
+                  </div>
+                  <input type="hidden" name="_recaptcha" id="_recaptcha"/>
+                     <script src="https://www.google.com/recaptcha/api.js?render=6Lf7UsoUAAAAACT2Z6gLyh7RTDfyYGxfZ-M4D0ph"></script>
+                     <script src="https://www.flexyform.com/js/recaptcha.js"></script>
+                  <button class="mkp-button-form mt-10 flex-shrink-0 text-sm border-4 text-white py-1 px-2 rounded" type="submit">
+                     Enviar
+                   </button>
+                </form>
+            </div>
+            <div class="mkp__form__pescado  md:w-1/2 py-16 md:relative">
+               <div class="container-img md:absolute mkp-pescadito">
+                  <img src="dist/images/form-img-min.png" alt="">
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+   <footer class="py-20" style="background-color: #191919;">
+      <div class="container">
+         <div class="md:flex md:items-center wrap w-full">
+            <div class="md:w-1/2">
+               <div class="logo" style="width: 200px; margin: 0 auto;">
+                  <img src="dist/images/trust-croped.png" alt="">
+               </div>
+            </div>
+            <div class="md:w-1/2 md:pl-8 text-center pt-8">
+               <p class="text-white font-bold">FIND US</p>
+               <p class="tracking-widest font-thin" style="color: #DE806E; font-family: 'gothamlight', sans-serif;">hola@trusthomes.mx</p>
+               <p class="tracking-widest font-thin" style="color: #DE806E; font-family: 'gothamlight', sans-serif;">+52 1 984 177 1938</p>
+               <p class="tracking-widest font-thin" style="color: #DE806E; font-family: 'gothamlight', sans-serif;">
+                  <a target="_blank" href="https://www.facebook.com/trusthomesmx"><span style="color: #86878a;"><i class="fab fa-facebook-f"></i></span></a> <a target="_blank" href="https://www.instagram.com/trusthomesmx/"><span style="color: #86878a;"><i class="fab fa-instagram"></i></span></a>  @trusthomes.mx
+               </p>
+            </div>
+         </div>
+         <div class="mkp-border my-10 mx-auto" style="border-bottom: 1px  solid #86878a;"></div>
+         <p class="text-center" style="color: #86878a; font-family: 'gothamlight', sans-serif;">Designed by <span class="text-white">Cut México</span> &#x000A9; All rights reserved. 2021</p>
+      </div>
+   </footer>
+
+
+
+   <script src="https://code.jquery.com/mobile/1.5.0-rc1/jquery.mobile-1.5.0-rc1.min.js"></script>
+   
+   <!-- start Sticky header js -->
+   <script>
+      // When the user scrolls the page, execute myFunction
+   window.onscroll = function() {myFunction()};
+   
+   // Get the header
+   var header = document.getElementById("myHeader");
+   
+   // Get the offset position of the navbar
+   var sticky = header.offsetTop;
+   
+   // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+   function myFunction() {
+     if (window.pageYOffset > sticky) {
+       header.classList.add("sticky");
+     } else {
+       header.classList.remove("sticky");
+     }
+   }
+   </script>
+   
+   <!-- end Sticky header js -->
+
+   <script>
+      $(window).scroll(function() {
+   
+   var scroll = $(window).scrollTop();
+   
+   $('.layer').each(function () {
+   
+     var layer = $(this);
+   
+     var dataSpeed = layer.data('parallax-speed');
+   
+     var offsetY = -(scroll * dataSpeed);
+   
+     var translate = 'translate3d(0, ' + offsetY + 'px, 0)';
+   
+     layer.css('-webkit-transform', translate);
+   
+     layer.css('-moz-transform', translate);
+   
+     layer.css('-ms-transform', translate);
+   
+     layer.css('-o-transform', translate);
+   
+     layer.css('transform', translate);
+   
+   });
+   
+   });
+   </script>
+
+
+
 
    <script>
       function app() {
